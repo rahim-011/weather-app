@@ -12,7 +12,7 @@ import { useEffect,useState } from "react";
 
 
 export default function App(){
-    const [city,setCity] = useState(null);
+    const [city,setCity] = useState('');
     const [weatherdata,setWeatherData] = useState(null);
     const [forecastdata,setForecastData] = useState(null);
     const [error,setError] = useState(null);
@@ -55,29 +55,57 @@ export default function App(){
         }
     }
 
-    useEffect(()=>{
-        const geoCity = async ()=>{
-            try{
-            if (navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(async (position)=>{
+    useEffect(() => {
+
+    const geoCity = () => {
+
+        if (navigator.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(
+
+                async (position) => {
+
                     const lat = position.coords.latitude;
                     const lon = position.coords.longitude;
-                    const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
-                    const cityRes = await geoRes.json();
-                    const city = cityRes.city || 'Algiers';
-                    fetchData(city)
-                })
-            }
+
+                    try {
+
+                        const geoRes = await fetch(
+                            `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`
+                        );
+
+                        const cityRes = await geoRes.json();
+
+                        const city = cityRes.city || 'Algiers';
+
+                        setCity(city);
+
+                    } catch (error) {
+
+                        console.log(error);
+
+                        setCity('Algiers');
+                    }
+                },
+
+                (error) => {
+
+                    console.log(error);
+
+                    setCity('Algiers');
+                }
+
+            );
+
+        } else {
+
+            setCity('Algiers');
         }
-            catch(error){
-                console.log(error)
-                setCity('Algiers')
-            }   
-        }
-        
-        geoCity();
-        
-    },[])
+    };
+
+    geoCity();
+
+}, []);
     useEffect(() => {
 
         if (city) {
