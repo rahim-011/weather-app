@@ -18,6 +18,7 @@ export default function App(){
     const [error,setError] = useState(null);
     const [isLoading,setLoading] = useState(false);
 
+    const API_BASE_URL = "https://weather-app-427p.onrender.com";
 
 
 
@@ -25,11 +26,11 @@ export default function App(){
         setLoading(true)
         try{
             setError(null)
-            const weatherResponse = await fetch(`http://localhost:3000/api/weather/${city}`);
+            const weatherResponse = await fetch(`${API_BASE_URL}/api/weather/${city}`);
             const weatherResult = await weatherResponse.json();
             
 
-            const forecastResponse = await fetch(`http://localhost:3000/api/forecast/${city}`)
+            const forecastResponse = await fetch(`${API_BASE_URL}/api/forecast/${city}`);
             const forecastResult = await forecastResponse.json();
 
             if (!weatherResult.success){
