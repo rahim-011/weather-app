@@ -4,13 +4,14 @@ import inIcon from '../images/in.png';
 import githubIcon from '../images/github.png';
 import fbIcon from '../images/fb.png';
 import { useState } from 'react';
+const API_BASE_URL = "https://weather-app-427p.onrender.com";
 
 export default function Subscribe() {
     const [email,setEmail] = useState('');
     const [emailMessage,setEmailMessage] = useState('');
     const [messageType,setMessageType] = useState('');
 
-    const [loadingSub,setLoadingSub] = useState('notLoading')
+    const [loadingSub,setLoadingSub] = useState('notLoading');
 
     const subscribe = async (e) =>{
         e.preventDefault();
@@ -19,6 +20,8 @@ export default function Subscribe() {
             if (!navigator.geolocation){
                 setEmailMessage('Old borwsers does not support this feature');
                 setMessageType('error');
+                setLoadingSub('result');
+                return;
             }
 
             const position = await new Promise((resolve,reject)=>{
@@ -45,11 +48,13 @@ export default function Subscribe() {
                 setEmailMessage('Your location were saved successfuly✅')
                 setMessageType('success')
                 setEmail('');
+                
         }
         catch(error){
             console.log(error)
             setMessageType('error')
             setEmailMessage('Error on internal server')
+            setLoadingSub('result');
         }
 
     }
@@ -63,7 +68,9 @@ export default function Subscribe() {
                     <p>Weather Compass is our official newsletter. SUBSCRIBE NOW for get the latest news on your weather right inside your email as soon as possible.</p>
                     <form onSubmit={subscribe}>
                         <div className={styles.emailContainer}>
-                            <input id='email' name='email'  type='email'  placeholder='Your email' onChange={(e)=>setEmail(e.target.value)}/>
+                            <input id='email' name='email'  type='email'  placeholder='Your email' onChange={(e)=>setEmail(e.target.value)}
+                            value={email}
+                            />
                             <button type='submit' className={styles.subBtn}>{messageType === 'success'? 'subscribed ✅': 'subscribe'}</button>
                             {loadingSub === 'loading' &&
                                 <p className={styles.analyzingSub}>Success! AI is analyzing your location...🔍</p> }{loadingSub === 'result' && <p className={messageType === 'error' ? styles.error: styles.success}>{emailMessage}</p>}
