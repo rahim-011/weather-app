@@ -60,7 +60,7 @@ export default function App(){
             try{
             if (navigator.geolocation){
                 navigator.geolocation.getCurrentPosition(async (position)=>{
-                    const lan = position.coords.latitude;
+                    const lat = position.coords.latitude;
                     const lon = position.coords.longitude;
                     const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
                     const cityRes = await geoRes.json();
