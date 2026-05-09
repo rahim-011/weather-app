@@ -14,8 +14,6 @@ dotenv.config();
 
 const PORT = process.env.PORT || 3001 ;
 const app = express();
-
-app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:5173',
             'https://madjidouzik.app.n8n.cloud',
@@ -24,6 +22,8 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
+
+app.use(express.json());
 app.use(morgan('dev'));
 app.use(helmet(
     {contentSecurityPolicy : false}
