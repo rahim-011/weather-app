@@ -58,7 +58,7 @@ export default function App(){
     useEffect(() => {
 
     const geoCity = () => {
-
+        fetchData("Algiers");
         if (navigator.geolocation) {
 
             navigator.geolocation.getCurrentPosition(
