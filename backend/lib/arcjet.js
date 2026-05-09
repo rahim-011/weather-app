@@ -7,6 +7,7 @@ dotenv.config();
 
 const aj = arcjet({
     key : process.env.ARCJET_KEY,
+    characteristics: ["http.request.headers[x-forwarded-for]"],
     rules : [
         shield({mode :'LIVE'}),
         detectBot({
