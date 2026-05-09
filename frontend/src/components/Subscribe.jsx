@@ -74,14 +74,14 @@ export default function Subscribe() {
             <div className={styles.copyrightContainer}>
                 <p>&copy; 2026 Weather Compass || All Rights Reserved</p>
                 <div className={styles.mediaContainer}>
-                    <span className={styles.mediaIcon}><a href="https://www.linkedin.com/in/rahim-rahim-031a69409/"><img src={fbIcon} alt='icon' target="_blank" 
-                    rel="noopener noreferrer"/></a></span>
-                    <span className={styles.mediaIcon}><a href="https://github.com/rahim-011"><img src={githubIcon} alt='icon' target="_blank" 
-                    rel="noopener noreferrer"/></a></span>
+                    <span className={styles.mediaIcon}><a href="https://www.linkedin.com/in/rahim-rahim-031a69409/" target="_blank" 
+                    rel="noopener noreferrer"><img src={fbIcon} alt='icon'/></a></span>
+                    <span className={styles.mediaIcon}><a href="https://github.com/rahim-011" target="_blank" 
+                    rel="noopener noreferrer"><img src={githubIcon} alt='icon'/></a></span>
                     <span className={styles.mediaIcon}><a href="https://www.instagram.com/rahim.1i/?hl=en" target="_blank" 
                     rel="noopener noreferrer"><img src={igIcon} alt='icon' /></a></span>
-                    <span className={styles.mediaIcon}><a href="https://www.linkedin.com/in/rahim-rahim-031a69409/"><img src={inIcon} alt='icon' target="_blank" 
-                    rel="noopener noreferrer"/></a></span>
+                    <span className={styles.mediaIcon}><a href="https://www.linkedin.com/in/rahim-rahim-031a69409/" target="_blank" 
+                    rel="noopener noreferrer"><img src={inIcon} alt='icon'/></a></span>
                 </div>
             </div>
         </div>
