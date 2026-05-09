@@ -56,6 +56,15 @@ export default function App(){
     }
 
     useEffect(()=>{
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(async (position)=>{
+                const lan = position.coords.latitude;
+                const lon = position.coords.longitude;
+                const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
+                const cityRes = await geoRes.json();
+                const city = cityRes.city || 'Algiers';
+            })
+        }
         fetchData(city)
     },[city])
     return (
