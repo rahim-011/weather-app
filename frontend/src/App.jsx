@@ -71,13 +71,20 @@ export default function App(){
         }
             catch(error){
                 console.log(error)
-                fetchData('Algiers')
+                setCity('Algiers')
             }   
         }
         
         geoCity();
         
     },[])
+    useEffect(() => {
+
+        if (city) {
+            fetchData(city);
+        }
+
+    }, [city]);
     return (
         <div className="container">
             <TopContainer setCity={setCity} weatherdata={weatherdata} forecastdata={forecastdata} isLoading={isLoading}/>
