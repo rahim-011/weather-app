@@ -56,17 +56,28 @@ export default function App(){
     }
 
     useEffect(()=>{
-        if (navigator.geolocation){
-            navigator.geolocation.getCurrentPosition(async (position)=>{
-                const lan = position.coords.latitude;
-                const lon = position.coords.longitude;
-                const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
-                const cityRes = await geoRes.json();
-                const city = cityRes.city || 'Algiers';
-            })
+        const geoCity = async ()=>{
+            try{
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(async (position)=>{
+                    const lan = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    const geoRes = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`);
+                    const cityRes = await geoRes.json();
+                    const city = cityRes.city || 'Algiers';
+                    fetchData(city)
+                })
+            }
         }
-        fetchData(city)
-    },[city])
+            catch(error){
+                console.log(error)
+                fetchData('Algiers')
+            }   
+        }
+        
+        geoCity();
+        
+    },[])
     return (
         <div className="container">
             <TopContainer setCity={setCity} weatherdata={weatherdata} forecastdata={forecastdata} isLoading={isLoading}/>
