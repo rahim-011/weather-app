@@ -47,7 +47,7 @@ app.use(async (req,res,next)=>{
                 return res.status(403).json({error:'Forbidden'})
             }
         }
-        if (decision.results.some(result => decision.result.isBot()&& decision.result.isSpoofed())){
+        if (decision.results.some(result => result.isBot() && result.isSpoofed())){
             return res.status(403).json({error: 'Spoofed bot detected!'})
         }
         next()
