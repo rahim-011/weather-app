@@ -1,0 +1,12 @@
+.underContainer{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+}
+
+@media screen and (max-width:1265px) {
+    .underContainer{
+        flex-direction: column;
+        gap: 20px;
+    }
+}

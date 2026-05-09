@@ -1,0 +1,94 @@
+.overviewContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px 30px 15px;
+    background-color: var(--CONTAINERS-BG);
+    height: auto;
+    border-radius: 10px;
+}
+
+.daysInfosContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.dayInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10%;
+    gap: 15px;
+    background-color: var(--BG-CARD);
+    color: var(--TEXTS-COLOR);
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 15px;
+    transition: var(--BG-EFFECT);
+}
+
+.dayInfos.currentDay {
+    background: var(--ACTIVE-CARD);
+    box-shadow: 0 0 15px rgba(58, 131, 237, 0.4);
+    border: 1px solid rgba(58, 131, 237, 0.6);
+    padding-left: 25px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.dayInfos.currentDay:hover {
+    transform: translateX(5px);
+    background: rgba(58, 131, 237, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
+                0 0 8px rgba(58, 131, 237, 0.2);
+}
+
+.dayInfos:hover {
+    background-color: var(--BG-CARD-HOVER);
+}
+
+.dayDivider {
+    width: 1px;           
+    height: 120px;         
+    background-color: var(--DARKER-COLOR);
+    align-self: center;      
+}
+
+
+@media screen and (max-width: 1265px) {
+    .overviewContainer {
+        padding: 20px;
+    }
+    .overviewContainer h3{
+        font-size: 1.3rem;
+    }
+
+    .daysInfosContainer {
+        width: 100%;
+        padding: 10px 0px;
+        justify-content: flex-start;
+        font-size: 1.2rem;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    }
+
+    .daysInfosContainer::-webkit-scrollbar {
+        display: none;
+    }
+
+    .dayInfos {
+        min-width: 150px;
+        flex-shrink: 0;
+    }
+
+    .dayDivider {
+        display: none;
+    }
+}

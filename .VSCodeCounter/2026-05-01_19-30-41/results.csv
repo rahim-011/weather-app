@@ -1,0 +1,41 @@
+"filename", "language", "HTML", "JSON", "Markdown", "JavaScript", "JavaScript JSX", "PostCSS", "Dotenv", "comment", "blank", "total"
+"/home/rahimjs/Documents/wether/.env", "Dotenv", 0, 0, 0, 0, 0, 0, 8, 1, 15, 24
+"/home/rahimjs/Documents/wether/backend/controllers/WeatherData.js", "JavaScript", 0, 0, 0, 20, 0, 0, 0, 0, 2, 22
+"/home/rahimjs/Documents/wether/backend/controllers/forecastData.js", "JavaScript", 0, 0, 0, 20, 0, 0, 0, 0, 1, 21
+"/home/rahimjs/Documents/wether/backend/lib/api.js", "JavaScript", 0, 0, 0, 17, 0, 0, 0, 0, 3, 20
+"/home/rahimjs/Documents/wether/backend/lib/arcjet.js", "JavaScript", 0, 0, 0, 20, 0, 0, 0, 0, 5, 25
+"/home/rahimjs/Documents/wether/backend/models/countries.js", "JavaScript", 0, 0, 0, 27, 0, 0, 0, 5, 12, 44
+"/home/rahimjs/Documents/wether/backend/routes/dataRouter.js", "JavaScript", 0, 0, 0, 6, 0, 0, 0, 0, 3, 9
+"/home/rahimjs/Documents/wether/backend/server.js", "JavaScript", 0, 0, 0, 47, 0, 0, 0, 0, 17, 64
+"/home/rahimjs/Documents/wether/frontend/README.md", "Markdown", 0, 0, 9, 0, 0, 0, 0, 0, 8, 17
+"/home/rahimjs/Documents/wether/frontend/eslint.config.js", "JavaScript", 0, 0, 0, 20, 0, 0, 0, 0, 2, 22
+"/home/rahimjs/Documents/wether/frontend/index.html", "HTML", 13, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"/home/rahimjs/Documents/wether/frontend/package-lock.json", "JSON", 0, 3040, 0, 0, 0, 0, 0, 0, 1, 3041
+"/home/rahimjs/Documents/wether/frontend/package.json", "JSON", 0, 30, 0, 0, 0, 0, 0, 0, 1, 31
+"/home/rahimjs/Documents/wether/frontend/src/App.jsx", "JavaScript JSX", 0, 0, 0, 0, 51, 0, 0, 0, 15, 66
+"/home/rahimjs/Documents/wether/frontend/src/components/Conditions.jsx", "JavaScript JSX", 0, 0, 0, 0, 41, 0, 0, 0, 5, 46
+"/home/rahimjs/Documents/wether/frontend/src/components/Display.jsx", "JavaScript JSX", 0, 0, 0, 0, 25, 0, 0, 0, 3, 28
+"/home/rahimjs/Documents/wether/frontend/src/components/LeftContainer.jsx", "JavaScript JSX", 0, 0, 0, 0, 13, 0, 0, 0, 2, 15
+"/home/rahimjs/Documents/wether/frontend/src/components/Overview.jsx", "JavaScript JSX", 0, 0, 0, 0, 50, 0, 0, 0, 6, 56
+"/home/rahimjs/Documents/wether/frontend/src/components/SearchBar.jsx", "JavaScript JSX", 0, 0, 0, 0, 111, 0, 0, 0, 14, 125
+"/home/rahimjs/Documents/wether/frontend/src/components/SideBar.jsx", "JavaScript JSX", 0, 0, 0, 0, 45, 0, 0, 0, 11, 56
+"/home/rahimjs/Documents/wether/frontend/src/components/Subscribe.jsx", "JavaScript JSX", 0, 0, 0, 0, 32, 0, 0, 0, 5, 37
+"/home/rahimjs/Documents/wether/frontend/src/components/TopContainer.jsx", "JavaScript JSX", 0, 0, 0, 0, 11, 0, 0, 0, 2, 13
+"/home/rahimjs/Documents/wether/frontend/src/components/UnderContainer.jsx", "JavaScript JSX", 0, 0, 0, 0, 11, 0, 0, 0, 2, 13
+"/home/rahimjs/Documents/wether/frontend/src/constants/lucideIcons.js", "JavaScript", 0, 0, 0, 20, 0, 0, 0, 0, 2, 22
+"/home/rahimjs/Documents/wether/frontend/src/constants/weatherIcons.js", "JavaScript", 0, 0, 0, 13, 0, 0, 0, 0, 1, 14
+"/home/rahimjs/Documents/wether/frontend/src/index.css", "PostCSS", 0, 0, 0, 0, 0, 61, 0, 0, 18, 79
+"/home/rahimjs/Documents/wether/frontend/src/main.jsx", "JavaScript JSX", 0, 0, 0, 0, 9, 0, 0, 0, 5, 14
+"/home/rahimjs/Documents/wether/frontend/src/styles/conditions.module.css", "PostCSS", 0, 0, 0, 0, 0, 64, 0, 0, 8, 72
+"/home/rahimjs/Documents/wether/frontend/src/styles/display.module.css", "PostCSS", 0, 0, 0, 0, 0, 44, 0, 0, 9, 53
+"/home/rahimjs/Documents/wether/frontend/src/styles/leftContainer.module.css", "PostCSS", 0, 0, 0, 0, 0, 6, 0, 0, 3, 9
+"/home/rahimjs/Documents/wether/frontend/src/styles/overview.module.css", "PostCSS", 0, 0, 0, 0, 0, 48, 0, 1, 15, 64
+"/home/rahimjs/Documents/wether/frontend/src/styles/searchBar.module.css", "PostCSS", 0, 0, 0, 0, 0, 162, 0, 2, 27, 191
+"/home/rahimjs/Documents/wether/frontend/src/styles/sideBar.module.css", "PostCSS", 0, 0, 0, 0, 0, 48, 0, 1, 6, 55
+"/home/rahimjs/Documents/wether/frontend/src/styles/subscribe.module.css", "PostCSS", 0, 0, 0, 0, 0, 92, 0, 0, 18, 110
+"/home/rahimjs/Documents/wether/frontend/src/styles/topContainer.module.css", "PostCSS", 0, 0, 0, 0, 0, 5, 0, 0, 2, 7
+"/home/rahimjs/Documents/wether/frontend/src/styles/underContainer.module.css", "PostCSS", 0, 0, 0, 0, 0, 5, 0, 0, 0, 5
+"/home/rahimjs/Documents/wether/frontend/vite.config.js", "JavaScript", 0, 0, 0, 5, 0, 0, 0, 1, 2, 8
+"/home/rahimjs/Documents/wether/package-lock.json", "JSON", 0, 1939, 0, 0, 0, 0, 0, 0, 1, 1940
+"/home/rahimjs/Documents/wether/package.json", "JSON", 0, 26, 0, 0, 0, 0, 0, 0, 1, 27
+"Total", "-", 13, 5035, 9, 215, 399, 535, 8, 11, 254, 6479

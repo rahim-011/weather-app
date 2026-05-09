@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --PAGE-BG:#0B121E;
+  --CONTAINERS-BG:#131C29;
+  --TEXTS-COLOR:#f0f8ffa5;
+  --DARKER-BG:#303946;
+  --DARKER-COLOR:#596a82;
+  --DARKER-MEDIUM:hsl(215, 19%, 53%);
+  --BG-EFFECT:background 0.5s ease;
+  --BG-CARD:#0B111E;
+  --BG-CARD-HOVER:rgba(255, 255, 255, 0.03);
+  --ACTIVE-CARD:#3a83ed40;
+
+  --ACCENT:#3B82F6; 
+  --ACCENT-LIGHT:   #60A5FA;
+  --CARD-BORDER:#1A2740; 
+  --ACCENT-BG:#1D3461; 
+  --ACCENT-LIGHT: #60A5FA;
+  --SKY:#0EA5E9; 
+  
+}
+
+
+
+
+
+
+
+image{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  min-height: 100vh;
+  font-family: 'Inter',sans-serif;
+  background-color: var(--PAGE-BG);
+  padding: 10px 20px 15px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+
+.weatherIcon > img{
+    width: 40px;
+    height: 40px;
+}
+
+.weatherTemp{
+  color: var(--TEXTS-COLOR);
+  font-weight: 600;
+}
+
+h3{
+    color: var(--TEXTS-COLOR);
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 5px;
+    margin-bottom: 30px;
+}
+
+button{
+  transition: var(--BG-EFFECT);
+}
+button:hover{
+  background-color: var(--ACCENT-BG);
+  cursor: pointer;
+}
+
+
+@media screen and (max-wdith:1265){
+  body{
+    padding: 5px 15px 10px 15px;
+  }
+  
+
+}

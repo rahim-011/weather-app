@@ -1,0 +1,105 @@
+.conditionsContainer{
+    background-color: var(--CONTAINERS-BG);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    border-radius: 10px;
+}
+.conditionsContainer h4{
+    color: var(--TEXTS-COLOR);
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.conditionsInfosContainer{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;    
+    gap: 10px;
+
+}
+.mainContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    flex: 1;   
+    min-width: 150px;
+}
+.mainContainer:first-child{
+    border-left: none;
+}
+
+.envInfos{
+    color: var(--TEXTS-COLOR);
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.info{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.info:not(.lucideIcon){
+    color: var(--TEXTS-COLOR);
+    opacity: 0.7;
+}
+.lucideIcon{
+    color: var(--ACTIVE-CARD);
+    filter: drop-shadow(0 0 5px #3a83ed66);
+}
+
+.infoVal{
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--TEXTS-COLOR);
+}
+
+@media screen and (max-width:1265px) {
+    .conditionsContainer{
+        width: 100%;
+    }
+    .conditionsInfosContainer{
+        justify-content: space-between;
+        padding: 0px;
+    }
+    .mainContainer{
+        min-width: 100px;
+    }
+}
+
+
+@media screen and (max-width:675px) {
+    .conditionsContainer h4{
+        font-size: 1.3rem;
+    }
+    .conditionsInfosContainer{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+        
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex: none;
+        min-width: unset;
+        width: 100%;
+    }
+}
+
+
+
+
+

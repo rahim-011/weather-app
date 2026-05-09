@@ -1,0 +1,53 @@
+
+
+.displayContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    padding: 50px 0;
+    background: radial-gradient(circle at 70% 30%, #1d346155 0%, transparent 70%);
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: var(--TEXTS-COLOR);
+}
+
+.cityInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    font-size: 3rem;
+    color: var(--TEXTS-COLOR);
+    margin: 0;
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+.humidity{
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+}
+
+span.temp{
+    color: white;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    font-size: 3rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+
+
+
+.imgWrapper{
+    object-fit: contain;
+}
+.imgWrapper img{
+    width: 150px;
+}

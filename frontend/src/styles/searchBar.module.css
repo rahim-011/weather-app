@@ -1,0 +1,193 @@
+
+.searchContainer{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    background-color: var(--DARKER-BG);
+    color: var(--DARKER-COLOR);
+    border: 1.5px solid transparent;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.searchBox:focus-within {
+    border-color: var(--ACCENT-BG);
+}
+.searchBox.showList{
+    border-radius: 10px 10px 0px 0px;
+}
+form{
+    display: flex;
+    width: 100%;
+}
+.input{
+    outline: none; /*Deleted soon*/
+
+    flex: 1.2rem;
+    width: 100%;
+    color:var(--ACCENT);
+    background-color: var(--CONTAINERS-BG);
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    line-height: normal;
+    border-radius: 10px;
+    padding: 15px 20px;
+    border: none;
+
+}
+
+
+
+.input::placeholder {
+    font-size: 1.15rem;
+    color: var(--DARKER-COLOR);
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.refreshContainer{
+    display: flex;
+    align-items: center;
+}
+
+
+/* Removing the 'X' btn from the input*/
+.input::-webkit-search-decoration,
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-results-button,
+.input::-webkit-search-results-decoration {
+  display: none;
+}
+
+.refreshBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: none;
+    background-color: var(--DARKER-BG);
+    color: var(--TEXTS-COLOR);
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.2);
+}
+.suggestionsContainer{
+    position: absolute;
+    width: calc(100% + 1px);
+    min-height: auto;
+    max-height: 350px;
+    top: 100%;
+    left: -1.5px;
+    z-index: 99;
+    margin-top: 2px;
+    background-color: rgba(30, 34, 45, 0.95);
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid var(--ACCENT-BG);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--MEDIUM) transparent;
+    animation: dropDown 0.3s ease-in-out forwards;
+}
+
+
+/*Scroll bars for deffrent browsers! */
+.suggestionsContainer::-webkit-scrollbar {
+    width: 6px; 
+}
+
+.suggestionsContainer::-webkit-scrollbar-track {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+.suggestionsContainer::-webkit-scrollbar-thumb {
+    background-color: var(--ACCENT-BG);
+    border-radius: 10px; 
+    border: 2px solid transparent; 
+}
+
+.suggestionsContainer::-webkit-scrollbar-thumb:hover {
+    background-color: var(--ACCENT);
+}
+
+.suggestionsContainer {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ACCENT-BG) transparent;
+}
+
+
+.suggestionItem{
+    border-bottom: 1px solid var(--DARKER-COLOR);
+    padding: 20px;
+    list-style-type: none;
+    color: var(--TEXTS-COLOR);
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.suggestionItem:hover,.suggestionItem.active{
+    cursor: pointer;
+    background-color: var(--ACCENT-BG);
+}
+
+.error{
+    position: absolute;
+    right: 60px;
+    top: 11px;
+    margin-top: 5px;
+    color: rgb(233, 44, 44);
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
+    animation: slideIn 0.3s ease-out;
+}
+.searchBox.isError{
+    border: 1px solid #a00909; 
+    box-shadow: 0 0 12px rgba(255, 95, 95, 0.3); 
+    animation: shake 0.2s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+@keyframes slideIn {
+    from {opacity: 0; transform: translateX(20px);}
+    to {opacity:1; transform: translateX(0px);}
+}
+
+@keyframes dropDown{
+    from {opacity: 0; transform: translateY(-10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+
+
+

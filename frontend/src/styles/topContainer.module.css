@@ -1,0 +1,19 @@
+.topContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+@media screen and (max-width:1265px){
+    .topContainer{
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .sideBar{
+        
+        width: 100%;
+    }
+    
+
+}
