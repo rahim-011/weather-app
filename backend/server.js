@@ -18,7 +18,8 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: ['http://localhost:5173',
-            'https://madjidouzik.app.n8n.cloud'
+            'https://madjidouzik.app.n8n.cloud',
+            'https://weather-app-1-d6k5.onrender.com'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
