@@ -87,5 +87,10 @@ button:hover{
     padding: 5px 15px 10px 15px;
   }
   
-
+}
+@media screen and (max-wdith:1078px){
+  body{
+    padding: 5px;
+  }
+  
 }

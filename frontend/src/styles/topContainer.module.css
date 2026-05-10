@@ -5,6 +5,7 @@
 }
 
 @media screen and (max-width:1265px){
+
     .topContainer{
         width: 100%;
         flex-direction: column;
