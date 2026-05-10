@@ -38,7 +38,7 @@ export default function Display({weatherdata,isLoading}){
         <div className={styles.displayContainer}>
             <div className={styles.infoContainer}>
                 <div className={styles.cityInfo}>
-                    <h2>{name.split(' ')[0]}</h2>
+                    <h2>{name.split[0]}</h2>
                     <span className={styles.humidity}>Humidity level: {humidity}%</span>
                 </div>
                 <div className={styles.tempInfo}>
