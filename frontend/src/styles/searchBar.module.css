@@ -201,6 +201,9 @@ form{
         padding: 10px 15px;
         font-size: 1rem;
     }
+    .suggestionItem{
+        font-size: 0.9rem;
+    }
 
 }
 
