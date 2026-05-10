@@ -12,14 +12,13 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    
 }
 
 .dayInfos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 10%;
+    width: auto;
     gap: 15px;
     background-color: var(--BG-CARD);
     color: var(--TEXTS-COLOR);
@@ -33,7 +32,7 @@
     background: var(--ACTIVE-CARD);
     box-shadow: 0 0 15px rgba(58, 131, 237, 0.4);
     border: 1px solid rgba(58, 131, 237, 0.6);
-    padding-left: 25px;
+    padding: 15px 25px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
@@ -50,18 +49,18 @@
 }
 
 .dayDivider {
-    width: 1px;           
-    height: 120px;         
+    width: 1px;
+    height: 120px;
     background-color: var(--DARKER-COLOR);
-    align-self: center;      
+    align-self: center;
 }
-
 
 @media screen and (max-width: 1265px) {
     .overviewContainer {
         padding: 20px;
     }
-    .overviewContainer h3{
+
+    .overviewContainer h3 {
         font-size: 1.3rem;
     }
 
@@ -76,7 +75,7 @@
         overflow-x: auto;
         gap: 15px;
         -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+        mask-image: linear-gradient(to right, black 90%, transparent 100%);
     }
 
     .daysInfosContainer::-webkit-scrollbar {
@@ -90,5 +89,18 @@ mask-image: linear-gradient(to right, black 90%, transparent 100%);
 
     .dayDivider {
         display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .dayInfos {
+        min-width: 120px;
+        font-size: 0.9rem;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .overviewContainer {
+        padding: 10px;
     }
 }

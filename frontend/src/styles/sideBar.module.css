@@ -1,4 +1,3 @@
-
 .sideBarContainer{
     background-color: var(--CONTAINERS-BG);
     padding: 20px;
@@ -18,33 +17,34 @@
     gap: 20px;
     width: 100%;
 }
+
 .dayInfoContainer{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     align-items: center;
-    padding:15px;
+    padding: 15px;
     border-radius: 10px;
     font-size: 0.9rem;
     background-color: var(--BG-CARD);
     transition: var(--BG-EFFECT);
 }
 
-/*Selected day on the week!*/
 .dayInfoContainer.currentDay{
     color: var(--ACCENT-LIGHT);
     background: var(--ACTIVE-CARD);
     box-shadow: 0 0 15px rgba(58, 131, 237, 0.4);
     border: 1px solid rgba(58, 131, 237, 0.6);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2,1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
-    
 }
+
 .dayInfoContainer.currentDay:hover{
     transform: translateX(-5px);
     background: rgba(58, 131, 237, 0.15);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 
                 0 0 8px rgba(58, 131, 237, 0.2);
 }
+
 .dayInfoContainer:hover{
     background-color: var(--BG-CARD-HOVER);
 }
@@ -54,23 +54,22 @@
     object-fit: contain;
 }
 
-
 span.darker{
     color: var(--DARKER-COLOR);
     white-space: nowrap;
 }
 
-
-
-@media screen and (max-width:1265px) {
+@media screen and (max-width: 1265px) {
     .sideBarContainer{
         width: 100%;
     }
+
     .weeklyInfoContainer{
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
     }
+
     .dayInfoContainer{
         display: flex;
         flex-direction: column;
@@ -80,14 +79,44 @@ span.darker{
     }
 }
 
-@media screen and (max-width:775px) {
+@media screen and (max-width: 775px) {
     .title h3{
         font-size: 1.3rem;
     }
+
     .weeklyInfoContainer{
         flex-wrap: wrap;
     }
+
     .dayInfoContainer{
         width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sideBarContainer{
+        padding: 10px;
+    }
+
+    .weeklyInfoContainer{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 10px;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+        -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
+        mask-image: linear-gradient(to right, black 90%, transparent 100%);
+    }
+
+    .weeklyInfoContainer::-webkit-scrollbar{
+        display: none;
+    }
+
+    .dayInfoContainer{
+        min-width: 110px;
+        width: auto;
+        flex-shrink: 0;
+        font-size: 0.9rem;
+        padding: 10px;
     }
 }
