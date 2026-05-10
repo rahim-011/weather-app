@@ -78,19 +78,13 @@ button{
 }
 button:hover{
   background-color: var(--ACCENT-BG);
-  cursor: pointer;
+  cursor:5px 15px 10px 15px pointer;
 }
 
 
 @media screen and (max-wdith:1265){
   body{
     padding: 5px 15px 10px 15px;
-  }
-  
-}
-@media screen and (max-wdith:1078px){
-  body{
-    padding: 5px;
   }
   
 }

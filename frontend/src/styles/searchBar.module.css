@@ -188,6 +188,22 @@ form{
 }
 
 
+@media screen and (max-width:1024px){
+    
+    .input{
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+    .input::placeholder{
+        font-size: 0.9rem;
+    }
+    .refreshBtn{
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
+}
+
 
 
 
