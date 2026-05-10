@@ -203,6 +203,7 @@ form{
     }
     .suggestionItem{
         font-size: 0.9rem;
+        padding: 13px;
     }
 
 }
