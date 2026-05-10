@@ -88,7 +88,7 @@ export default function SearchBar({setCity}){
         <div className={styles.searchContainer}>
             <div className={`${styles.searchBox} ${inputError ? styles.isError : ''} ${showClass}`}>
                 <form onSubmit={handleSubmit}>
-                    <input id="searched" type='search' placeholder="Search for cities" className={styles.input} spellCheck="false" 
+                    <input id="searched" type='search' placeholder="Search for cities" className={`${styles.input} ${isShown ? styles.showList : ''}`} spellCheck="false" 
                     autoComplete="off" onChange={(e)=>
                     { 
                         const value = e.target.value.toLowerCase();

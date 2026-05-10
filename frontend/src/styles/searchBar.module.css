@@ -25,7 +25,7 @@
 .searchBox:focus-within {
     border-color: var(--ACCENT-BG);
 }
-.searchBox.showList{
+.input.showList,.searchBox.showList{
     border-radius: 10px 10px 0px 0px;
 }
 form{
