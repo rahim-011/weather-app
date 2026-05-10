@@ -89,6 +89,9 @@
         padding: 0px;
         
     }
+    .envInfos span{
+        font-size: 1.1rem;
+    }
     .mainContainer{
         display: flex;
         flex-direction: row;
@@ -98,6 +101,7 @@
         width: 100%;
     }
 }
+
 
 
 
