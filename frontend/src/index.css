@@ -78,7 +78,7 @@ button{
 }
 button:hover{
   background-color: var(--ACCENT-BG);
-  cursor:5px 15px 10px 15px pointer;
+  cursor: pointer;
 }
 
 

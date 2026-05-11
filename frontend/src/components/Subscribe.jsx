@@ -81,7 +81,7 @@ export default function Subscribe() {
             <div className={styles.copyrightContainer}>
                 <p>&copy; 2026 Weather Compass || All Rights Reserved</p>
                 <div className={styles.mediaContainer}>
-                    <span className={styles.mediaIcon}><a href="https://www.linkedin.com/in/rahim-rahim-031a69409/" target="_blank" 
+                    <span className={styles.mediaIcon}><a href="https://www.facebook.com/people/Rahim-Boubaker/pfbid0345myk2Mv9EfPTseYse6EL9WVcqjq8SsEJ5L3t7aFudWqazErQBqonnw9rLH4XkVol/?rdid=alL1x74o6rP59Mpf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CjAAA3A6h%2F" target="_blank" 
                     rel="noopener noreferrer"><img src={fbIcon} alt='icon'/></a></span>
                     <span className={styles.mediaIcon}><a href="https://github.com/rahim-011" target="_blank" 
                     rel="noopener noreferrer"><img src={githubIcon} alt='icon'/></a></span>
