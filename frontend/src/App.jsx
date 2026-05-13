@@ -80,7 +80,7 @@ export default function App(){
 
                     } catch (error) {
 
-                        // console.log(error);
+                        console.log(error);
 
                         setCity('Algiers');
                     }
@@ -104,13 +104,13 @@ export default function App(){
     geoCity();
 
 }, []);
-    useEffect(() => {
+    // useEffect(() => {
 
-        if (city) {
-            fetchData(city);
-        }
+    //     if (city) {
+    //         fetchData(city);
+    //     }
 
-    }, [city]);
+    // }, [city]);
     return (
         <div className="container">
             <TopContainer setCity={setCity} weatherdata={weatherdata} forecastdata={forecastdata} isLoading={isLoading}/>
