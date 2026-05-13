@@ -35,7 +35,6 @@ export default function Display({weatherdata,isLoading}){
     const {humidity,temp} = main;
     const weatherConditions = weather[0].main;
     
-    console.log(weatherdata)
     return (
         <div className={styles.displayContainer}>
             <div className={styles.infoContainer}>
