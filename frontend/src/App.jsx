@@ -104,13 +104,13 @@ export default function App(){
     geoCity();
 
 }, []);
-    // useEffect(() => {
 
-    //     if (city) {
-    //         fetchData(city);
-    //     }
+useEffect(() => {
+    if (city) {
+        fetchData(city);
+    }
+}, [city]);
 
-    // }, [city]);
     return (
         <div className="container">
             <TopContainer setCity={setCity} weatherdata={weatherdata} forecastdata={forecastdata} isLoading={isLoading}/>
