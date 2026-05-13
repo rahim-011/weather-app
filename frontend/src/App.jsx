@@ -63,7 +63,7 @@ export default function App(){
             navigator.geolocation.getCurrentPosition(
 
                 async (position) => {
-
+                     console.log("LOCATION ALLOWED");
                     const lat = position.coords.latitude;
                     const lon = position.coords.longitude;
 
