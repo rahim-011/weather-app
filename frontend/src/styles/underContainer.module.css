@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     column-gap: 25px;
+    min-height: 330px;
 }
 
 @media screen and (max-width:1265px) {

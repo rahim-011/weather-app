@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
-
+    min-height: 619px;
 }
 
 @media screen and (max-width:1265px){
@@ -11,6 +11,7 @@
         width: 100%;
         flex-direction: column;
         gap: 20px;
+        height: auto;
     }
     .sideBar{
         width: 100%;
