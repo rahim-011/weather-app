@@ -29,5 +29,4 @@ export const cities = [
   "New York", "Washington", "Los Angeles", "Chicago", "Toronto", "Montreal", "Tokyo", 
   "Seoul", "Beijing", "Shanghai", "Sydney", "Melbourne",
 
-
 ];
