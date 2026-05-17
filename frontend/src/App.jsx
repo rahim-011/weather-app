@@ -11,7 +11,7 @@ import { useEffect,useState } from "react";
 
 
 export default function App(){
-    const [city,setCity] = useState('Algiers');
+    const [city,setCity] = useState();
     const [weatherdata,setWeatherData] = useState(null);
     const [forecastdata,setForecastData] = useState(null);
     const [error,setError] = useState(null);
