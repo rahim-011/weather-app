@@ -11,7 +11,7 @@ import { useEffect,useState } from "react";
 
 
 export default function App(){
-    const [city,setCity] = useState();
+    const [city,setCity] = useState(null);
     const [weatherdata,setWeatherData] = useState(null);
     const [forecastdata,setForecastData] = useState(null);
     const [error,setError] = useState(null);
@@ -102,7 +102,7 @@ export default function App(){
             );
 
         } else {
-
+            console.log()
             setCity('Algiers');
         }
     };
